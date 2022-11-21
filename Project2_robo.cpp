@@ -9,7 +9,7 @@ int main()
 {
     //Open input and output files & test for success
     ifstream robo;
-    robo.open ("small-robo-input.txt");
+    robo.open ("small-robo-input.txt");     //CHANGE TO READ FROM "input.txt" BEFORE SUBMITTAL
     if (robo.is_open())
         cout << "success" << endl;
     else
