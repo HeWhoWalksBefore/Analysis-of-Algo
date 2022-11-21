@@ -29,7 +29,8 @@ int main()
         getline(robot, current);
     }
 
-    int result = -1;
+    //Go to omnidroid or robotomata depending on input. If output file shows -1, the getline 
+    int result = -1;                                                    //name doesn't match
     if (current == "omnidroid"){
         result = omnidroid(robot, current);
     }
@@ -37,6 +38,7 @@ int main()
         result = robotomata(robot, current);
     }
 
+    //send result to output file
     output << result;
     return 0;
 }
