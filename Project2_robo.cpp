@@ -53,6 +53,7 @@ int main()
     for (i = 0; i < operations.size(); i++)
         cout << i << " " << operations.at(i) << endl;
 
+    //output results
     output << operations.back();
     return 0;
 }
