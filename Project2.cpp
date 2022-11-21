@@ -8,7 +8,7 @@ using namespace std;
 int main()
 {
     ifstream omni;
-    omni.open ("omni.txt");
+    omni.open ("omni");
     if (omni.is_open())
         cout << "success" << endl;
     else
