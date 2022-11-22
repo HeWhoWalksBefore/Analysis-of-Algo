@@ -22,24 +22,27 @@ int main()
         cout << "success" << endl;
     else
         cout << "failure";
-    
+    /*
     //get to line 4 (where it tells us part num and operation num)
     string current;
     for (int i = 0; i <= 2; i++){
         getline(robot, current);
-    }
+    }*/
 
     //Go to omnidroid or robotomata depending on input. If output file shows -1, the getline 
     int result = -1;                                                    //name doesn't match
-    if (current == "omnidroid"){
-        result = omnidroid(robot, current);
+    string current;
+    while (!robot.eof()){
+        getline(robot, current);
+        if (current == "omnidroid"){
+            result = omnidroid(robot, current);
+            output << result << endl;
+        }
+        else if (current == "robotomaton"){
+            result = robotomata(robot, current);
+            output << result << endl;
+        }
     }
-    else if (current == "robotomaton"){
-        result = robotomata(robot, current);
-    }
-
-    //send result to output file
-    output << result;
     return 0;
 }
 
