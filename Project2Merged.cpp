@@ -11,7 +11,7 @@ int main()
 {
     //Open input file (omni) and output file (output) & test for success
     ifstream robot;
-    robot.open ("input.txt");
+    robot.open ("example-input.txt");
     if (robot.is_open())
         cout << "success" << endl;
     else
@@ -22,12 +22,6 @@ int main()
         cout << "success" << endl;
     else
         cout << "failure";
-    /*
-    //get to line 4 (where it tells us part num and operation num)
-    string current;
-    for (int i = 0; i <= 2; i++){
-        getline(robot, current);
-    }*/
 
     //Go to omnidroid or robotomata depending on input. If output file shows -1, the getline 
     int result = -1;                                                    //name doesn't match
