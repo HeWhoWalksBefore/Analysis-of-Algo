@@ -27,6 +27,7 @@ int main()
     int result = -1;                                                    //name doesn't match
     string current;
     while (!robot.eof()){
+        robot.clear();
         getline(robot, current);
         if (current == "omnidroid"){
             result = omnidroid(robot, current);
@@ -94,7 +95,7 @@ int robotomata(ifstream& robo, string current){
         operations.push_back(sprockets);    //add sprocket value to the vector
         getline(robo,current);              //getline to move to next line
     }
-
+    
     //output results
     return operations.back();
 }
