@@ -11,7 +11,7 @@ int main()
 {
     //Open input file (omni) and output file (output) & test for success
     ifstream robot;
-    robot.open ("example-input.txt");
+    robot.open ("input.txt");
     if (robot.is_open())
         cout << "success" << endl;
     else
